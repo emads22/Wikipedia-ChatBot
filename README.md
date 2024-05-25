@@ -1,5 +1,14 @@
 # Wikipedia ChatBot
 
+```bash
+ __        __ _  _     _                   _  _           ____  _             _    ____          _   
+ \ \      / /(_)| | __(_) _ __    ___   __| |(_)  __ _   / ___|| |__    __ _ | |_ | __ )   ___  | |_ 
+  \ \ /\ / / | || |/ /| || '_ \  / _ \ / _` || | / _` | | |    | '_ \  / _` || __||  _ \  / _ \ | __|
+   \ V  V /  | ||   < | || |_) ||  __/| (_| || || (_| | | |___ | | | || (_| || |_ | |_) || (_) || |_ 
+    \_/\_/   |_||_|\_\|_|| .__/  \___| \__,_||_| \__,_|  \____||_| |_| \__,_| \__||____/  \___/  \__|
+                         |_|                                                                         
+```
+
 ## Overview
 Wikipedia ChatBot is a simple chatbot application that allows users to interactively learn about various topics by fetching information from Wikipedia. Users can input a topic of interest, and the chatbot retrieves the corresponding Wikipedia article. Users can then ask questions related to the topic, and the chatbot provides answers based on the closest match found in the article text.
 

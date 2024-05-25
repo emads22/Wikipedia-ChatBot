@@ -77,6 +77,8 @@ def wikipedia_chatbot():
     for questions related to the topic, providing answers based on the closest match
     found in the article text. The chatbot terminates if the user inputs an exit command.
     """
+    # Print Logo Ascii Art
+    print(f"\n\n\n{ASCII_ART}\n")
 
     # Print initial greeting message
     print(f"\n\n{BOT_PROMPT}Hi there! I'm here to help you learn about any topic. Please tell me what topic you'd like to learn about.")
