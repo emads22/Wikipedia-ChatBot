@@ -1,4 +1,5 @@
 import nltk
+from nltk.data import find
 from nltk.stem import WordNetLemmatizer
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
@@ -6,18 +7,38 @@ from sklearn.metrics.pairwise import cosine_similarity
 
 def download_nltk_data():
     """
-    Download NLTK data required for tokenization, lemmatization, and part-of-speech tagging.
+    Download NLTK data required for tokenization, lemmatization, and part-of-speech tagging
+    if they are not already present.
 
-    This function downloads the following NLTK datasets:
+    This function checks and downloads the following NLTK datasets if necessary:
     - `wordnet`: Data required for lemmatization.
     - `omw-1.4`: Open Multilingual WordNet for lemmatization.
     - `punkt`: Tokenizer data required for text tokenization.
     - `averaged_perceptron_tagger`: Data required for part-of-speech tagging.
     """
-    nltk.download('wordnet')
-    # nltk.download('omw-1.4')
-    nltk.download('punkt')
-    nltk.download('averaged_perceptron_tagger')
+    # Check and download 'wordnet' if not present
+    try:
+        find('corpora/wordnet')
+    except LookupError:
+        nltk.download('wordnet')
+
+    # # Check and download 'omw-1.4' if not present
+    # try:
+    #     find('corpora/omw')
+    # except LookupError:
+    #     nltk.download('omw-1.4')
+
+    # Check and download 'punkt' if not present
+    try:
+        find('tokenizers/punkt')
+    except LookupError:
+        nltk.download('punkt')
+
+    # Check and download 'averaged_perceptron_tagger' if not present
+    try:
+        find('taggers/averaged_perceptron_tagger')
+    except LookupError:
+        nltk.download('averaged_perceptron_tagger')
 
 
 def lemmatize_sentence(sentence):

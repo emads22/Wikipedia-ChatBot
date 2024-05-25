@@ -38,4 +38,13 @@ dependencies:
   - wheel=0.43.0=py312haa95532_0
   - xz=5.4.6=h8cc25b3_1
   - zlib=1.2.13=h8cc25b3_1
+  - pip:
+      - beautifulsoup4==4.12.3
+      - certifi==2024.2.2
+      - charset-normalizer==3.3.2
+      - idna==3.7
+      - requests==2.32.2
+      - soupsieve==2.5
+      - urllib3==2.2.1
+      - wikipedia==1.4.0
 
